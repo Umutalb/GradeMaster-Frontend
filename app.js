@@ -1,4 +1,4 @@
-const API_URL = "https://grademaster-api-8bca374f4b3b.herokuapp.com/api/Grades";
+const API_URL = "https://grademaster-api-8bca374f4b3b.herokuapp.com/api/grades";
 
 const form = document.getElementById("grade-form");
 const resultCard = document.getElementById("result");
