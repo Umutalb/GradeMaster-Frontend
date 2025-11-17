@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>GradeMaster - Grade Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div>
+                <h1>GradeMaster</h1>
+                <p class="subtitle">Simple exam grade calculator</p>
+            </div>
+            <span class="badge">v1.0</span>
+        </header>
+
+        <form id="grade-form">
+            <div class="field-row">
+                <label for="midterm">Midterm grade</label>
+                <input id="midterm" name="midterm" type="number" min="0" max="100" step="0.1" required />
+            </div>
+            <div class="field-row">
+                <label for="final">Final grade</label>
+                <input id="final" name="final" type="number" min="0" max="100" step="0.1" required />
+            </div>
+
+            <div class="field-row">
+                <label for="midtermWeight">Midterm weight (0-1)</label>
+                <input id="midtermWeight" name="midtermWeight" type="number" min="0" max="1" step="0.05" value="0.4" required />
+            </div>
+            <div class="field-row">
+                <label for="finalWeight">Final weight (0-1)</label>
+                <input id="finalWeight" name="finalWeight" type="number" min="0" max="1" step="0.05" value="0.6" required />
+            </div>
+
+            <div class="field-row">
+                <label for="passingGrade">Passing grade</label>
+                <input id="passingGrade" name="passingGrade" type="number" min="0" max="100" step="0.1" value="45" required />
+            </div>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result" class="card hidden">
+            <h2>Result</h2>
+            <p><strong>Average:</strong> <span id="avg"></span></p>
+            <p><strong>Status:</strong> <span id="status"></span></p>
+            <p><strong>Message:</strong> <span id="comment"></span></p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
